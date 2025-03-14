@@ -1,0 +1,11 @@
+---
+# ملف تكوين وكيل المعجزات العلمية
+
+name: scientific_miracles_agent
+type: ScientificMiraclesAgent
+description: "وكيل متخصص في تحليل الآيات المتعلقة بالظواهر العلمية"
+enabled: true
+# لا نحتاج لتحديد أي معلمات إضافية لأن الوكيل لا يقبل سوى معلمة name
+# parameters:
+#   weight: 0.85
+#   default_confidence: 0.85 

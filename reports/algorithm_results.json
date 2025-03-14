@@ -1,0 +1,23 @@
+{
+    "root_extraction_before": {
+        "correct": 80,
+        "incorrect": 20,
+        "accuracy": 0.8
+    },
+    "root_extraction_after": {
+        "correct": 90,
+        "incorrect": 10,
+        "accuracy": 0.9
+    },
+    "morphology_analysis_before": {
+        "correct": 75,
+        "incorrect": 25,
+        "accuracy": 0.75
+    },
+    "morphology_analysis_after": {
+        "correct": 85,
+        "incorrect": 15,
+        "accuracy": 0.85
+    },
+    "timestamp": "2025-03-14T10:30:10.418156"
+}

@@ -1,0 +1,21 @@
+{
+    "qdrant": {
+        "url": "https://9c41ece4-5e7f-4f91-8292-37e234f6c201.us-east4-0.gcp.cloud.qdrant.io:6333",
+        "api_key": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.wzZ1xzWs5MjVqV_BhblVOcKbuQrMwFlrnUU9IxxGz60"
+    },
+    "ollama": {
+        "host": "http://localhost:11434",
+        "model": "mistral"
+    },
+    "data": {
+        "quran_dir": "/Users/amryusif/CascadeProjects/Memo/local_mem0_agent/data/quran",
+        "tafseer_dir": "/Users/amryusif/CascadeProjects/Memo/local_mem0_agent/data/tafseer",
+        "miracle_dir": "/Users/amryusif/CascadeProjects/Memo/local_mem0_agent/data/miracles",
+        "audio_dir": "/Users/amryusif/CascadeProjects/Memo/local_mem0_agent/data/audio",
+        "video_dir": "/Users/amryusif/CascadeProjects/Memo/local_mem0_agent/data/video"
+    },
+    "ui": {
+        "theme": "dark",
+        "language": "ar"
+    }
+}

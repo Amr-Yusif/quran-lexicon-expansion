@@ -1,0 +1,43 @@
+---
+# ملف تكوين لجميع الوكلاء في النظام
+
+# الإعدادات العامة
+general:
+  auto_register: true
+  config_dir: "config/agents"
+  default_enabled: true
+  load_from_files: true
+  scan_directories: ["core/ai"]
+
+# تسجيل الوكلاء
+agents:
+  # وكيل التحليل اللغوي
+  linguistic_agent:
+    type: LinguisticAgent
+    enabled: true
+  
+  # وكيل اكتشاف الأنماط
+  pattern_discovery_agent:
+    type: PatternDiscoveryAgent
+    enabled: true
+  
+  # وكيل الاستدلال
+  reasoning_agent:
+    type: ReasoningAgent
+    enabled: true
+  
+  # وكيل البحث
+  search_agent:
+    type: SearchAgent
+    enabled: true
+  
+  # وكيل المعجزات العلمية
+  scientific_agent:
+    type: ScientificMiraclesAgent
+    enabled: true
+    config_file: "scientific_miracles_agent.yaml"
+  
+  # وكيل استخراج المسارات الموضوعية
+  thematic_agent:
+    type: ThematicPathAgent
+    enabled: false  # معطل مؤقتاً بسبب وجود خطأ 

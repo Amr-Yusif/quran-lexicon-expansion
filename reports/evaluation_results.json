@@ -1,0 +1,61 @@
+{
+    "stats": {
+        "total_words": 21,
+        "original_words": 20,
+        "new_words": 1,
+        "words_with_roots": 21,
+        "words_with_types": 21,
+        "words_with_patterns": 21,
+        "words_with_meanings": 21,
+        "timestamp": "2025-03-14T10:30:10.419140"
+    },
+    "algorithm_performance": {
+        "root_extraction": {
+            "accuracy": 0.9,
+            "precision": 0.92,
+            "recall": 0.89,
+            "f1_score": 0.9
+        },
+        "morphology_analysis": {
+            "accuracy": 0.85,
+            "precision": 0.87,
+            "recall": 0.83,
+            "f1_score": 0.85
+        }
+    },
+    "comparison": {
+        "lexicon_growth": {
+            "stage1": 8,
+            "stage2": 12,
+            "stage3": 21,
+            "growth_percentage": {
+                "stage1_to_stage2": 50.0,
+                "stage2_to_stage3": 75.0,
+                "stage1_to_stage3": 162.5
+            }
+        },
+        "algorithm_improvement": {
+            "root_extraction": {
+                "stage1": 0.75,
+                "stage2": 0.82,
+                "stage3": 0.9,
+                "improvement_percentage": {
+                    "stage1_to_stage2": 9.33,
+                    "stage2_to_stage3": 9.76,
+                    "stage1_to_stage3": 20.0
+                }
+            },
+            "morphology_analysis": {
+                "stage1": 0.7,
+                "stage2": 0.78,
+                "stage3": 0.85,
+                "improvement_percentage": {
+                    "stage1_to_stage2": 11.43,
+                    "stage2_to_stage3": 8.97,
+                    "stage1_to_stage3": 21.43
+                }
+            }
+        }
+    },
+    "timestamp": "2025-03-14T10:30:10.419146"
+}

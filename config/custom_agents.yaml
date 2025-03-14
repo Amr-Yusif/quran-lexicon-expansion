@@ -1,0 +1,48 @@
+# تكوين مخصص للوكلاء
+
+general:
+  auto_register: true
+  config_dir: config/agents
+  default_enabled: true
+  scan_directories: 
+    - core/ai
+  
+agents:
+  # وكيل التحليل اللغوي
+  - name: linguistic_analyzer
+    type: LinguisticAgent
+    enabled: true
+    file: linguistic_agent.yaml
+  
+  # وكيل اكتشاف الأنماط
+  - name: pattern_discoverer
+    type: PatternDiscoveryAgent
+    enabled: true
+    
+  # وكيل الاستدلال
+  - name: reasoner
+    type: ReasoningAgent
+    enabled: true
+    
+  # وكيل البحث
+  - name: searcher
+    type: SearchAgent
+    enabled: true
+    
+  # وكيل المعجزات العلمية
+  - name: scientific_miracles
+    type: ScientificMiraclesAgent
+    enabled: true
+    file: scientific_miracles_agent.yaml
+    
+  # وكيل استخراج المسارات الموضوعية
+  - name: thematic_path
+    type: ThematicPathAgent
+    enabled: false  # معطل بسبب وجود مشاكل حالية
+
+# إعدادات متقدمة
+advanced:
+  log_level: INFO
+  timeout: 60  # مهلة لتنفيذ كل وكيل (بالثواني)
+  cache_results: true
+  max_history: 100  # الحد الأقصى لتاريخ النتائج 

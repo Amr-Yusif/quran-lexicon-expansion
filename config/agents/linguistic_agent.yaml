@@ -1,0 +1,39 @@
+---
+# ملف تكوين وكيل التحليل اللغوي
+
+name: linguistic_agent
+type: LinguisticAgent
+description: "وكيل متخصص في التحليل اللغوي للنصوص العربية"
+enabled: true
+
+# إعدادات الوكيل
+parameters:
+  # أنواع التحليل المفعلة
+  analysis_types:
+    - morphological
+    - syntactic
+    - semantic
+    - rhetorical
+
+  # قاموس الجذور والمشتقات
+  root_dictionary: "data/dictionaries/arabic_roots.json"
+
+  # إعدادات تحليل البلاغة
+  rhetorical_analysis:
+    enabled: true
+    figures_of_speech: 
+      - استعارة
+      - تشبيه
+      - كناية
+      - مجاز
+
+  # إعدادات حدود المعالجة
+  processing_limits:
+    max_text_length: 10000
+    max_sentences: 100
+
+  # وزن الوكيل في النظام (يستخدم في تركيب النتائج)
+  weight: 0.8
+  
+  # مستوى الثقة الافتراضي
+  default_confidence: 0.75 

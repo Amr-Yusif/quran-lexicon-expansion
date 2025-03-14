@@ -1,0 +1,84 @@
+# متطلبات المكتبات الأساسية
+streamlit>=1.24.0
+streamlit-option-menu>=0.3.2
+ollama>=0.1.5
+llama-index>=0.9.11
+python-dotenv>=1.0.0
+
+# متطلبات معالجة اللغة والتضمين
+sentence-transformers>=2.2.2
+transformers>=4.30.0
+torch>=2.0.0
+numpy>=1.24.0
+scikit-learn>=1.2.0
+arabicnlp>=0.1.0  # مكتبة اختيارية للتعامل مع اللغة العربية
+faiss-cpu>=1.7.0  # لتسريع البحث للنشر المحلي، استخدم faiss-gpu للحوسبة المُسرَعة بالـ GPU
+
+# متطلبات قواعد البيانات والتخزين
+qdrant-client>=1.1.1
+requests>=2.28.0
+httpx>=0.24.0
+
+# متطلبات معالجة PDF
+PyMuPDF>=1.22.0  # للقراءة والمعالجة المتقدمة للـ PDF
+python-magic>=0.4.27  # للكشف عن نوع الملف
+
+# متطلبات معالجة PDF، الصوت، والفيديو
+PyPDF2>=3.0.0
+pdfminer.six>=20221105
+beautifulsoup4>=4.12.0
+tqdm>=4.65.0
+SpeechRecognition>=3.10.0  # للتعرف على الكلام
+opencv-python>=4.7.0  # لمعالجة الفيديو والصور
+pytesseract>=0.3.10  # للتعرف على النص في الصور (OCR)
+matplotlib>=3.7.1  # للرسوم البيانية
+pydub>=0.25.1  # لمعالجة الصوت
+pillow>=9.0.0
+
+# متطلبات تحميل وتحليل المحتوى
+internetarchive>=3.5.0  # للتفاعل مع موقع أرشيف.أورغ
+lxml>=4.9.2  # لتحليل HTML بشكل أسرع
+
+# متطلبات التطوير والاختبار
+pytest>=7.3.1
+pytest-cov>=4.1.0
+ruff>=0.0.262
+mypy>=1.3.0
+
+# متطلبات أمنية
+cryptography>=40.0.0
+bcrypt>=4.0.0
+
+# متطلبات الواجهة المتقدمة
+streamlit-option-menu>=0.3.2
+streamlit-chat>=0.0.2.2
+streamlit-extras>=0.2.7
+
+# مكتبات إضافية للتعامل مع اللغة العربية
+python-bidi>=0.4.2  # للتعامل مع النصوص ثنائية الاتجاه
+arabic-reshaper>=3.0.0  # لإعادة تشكيل النص العربي للعرض
+wordcloud>=1.8.2.2  # لإنشاء سحابة الكلمات
+nltk>=3.8.1  # لمعالجة اللغة الطبيعية
+pandas>=2.0.0  # لمعالجة البيانات
+altair>=5.0.0  # للرسوم البيانية التفاعلية
+plotly>=5.14.0  # للرسوم البيانية التفاعلية المتقدمة
+
+# Core requirements
+streamlit>=1.24.0
+plotly>=5.13.0
+pandas>=1.5.3
+numpy>=1.24.2
+
+# UI requirements
+streamlit-option-menu>=0.3.2
+streamlit-extras>=0.2.7
+
+# Data processing
+python-dotenv>=0.19.2
+requests>=2.28.2
+aiohttp>=3.8.4
+
+# Testing
+pytest>=7.3.1
+pytest-asyncio>=0.21.0
+pytest-cov>=4.0.0

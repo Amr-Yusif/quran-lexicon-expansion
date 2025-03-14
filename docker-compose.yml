@@ -1,0 +1,91 @@
+version: '3.8'
+
+services:
+  # خدمة MongoDB لتخزين البيانات المنظمة
+  mongodb:
+    image: mongo:latest
+    container_name: quran-assistant-mongodb
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=quranassistantpass
+      - MONGO_INITDB_DATABASE=quran_assistant
+    networks:
+      - quran-assistant-network
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh localhost:27017/quran_assistant --quiet
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # خدمة Redis للتخزين المؤقت
+  redis:
+    image: redis:latest
+    container_name: quran-assistant-redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes
+    networks:
+      - quran-assistant-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # خدمة Qdrant للبحث الدلالي
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: quran-assistant-qdrant
+    restart: always
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    networks:
+      - quran-assistant-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  # خدمة Ollama للنماذج اللغوية المحلية
+  ollama:
+    image: ollama/ollama:latest
+    container_name: quran-assistant-ollama
+    restart: always
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - quran-assistant-network
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+volumes:
+  mongodb_data:
+  redis_data:
+  qdrant_data:
+  ollama_data:
+
+networks:
+  quran-assistant-network:
+    driver: bridge
